@@ -71,15 +71,19 @@ Detected faces per frame with bounding boxes, keypoints, detection scores, and a
 }
 ```
 
----
-
 ## Scripts
 
-## 
+### `process_tvqa/`
+
+Preprocessing pipeline for TVQA data:
+
+* `cfg.yaml`: YAML configuration file containing root paths, show list, API keys, etc.
+* `process.py`: Extracts frames, face embeddings, enhanced subtitles, and reconstructs annotated video clips.
+ 
 
 ### `inference/`
 
-You can swap out the model name in `inference.py` to do this with other models via vLLM for vision–language models; or you can check out the `gemini-demo.ipynb` (which requires Google Cloud Platfrm). 
+You can swap out the model name in `vlm-inference.py` to do this with other models via vLLM for vision–language models; or you can check out the `gemini-demo.ipynb` (which requires Google Cloud Platfrm). 
 
 By default, output JSON files are saved under:
 
