@@ -1,0 +1,38 @@
+root: "YOUR_PROJECT_ROOT" 
+
+# API keys
+tmdb_api_key: "YOUR_TMDB_KEY"
+hf_token: "YOUR_HF_TOKEN"
+
+# Face detection models 
+# you can find them here: 
+# https://github.com/dbamman/movie-representation/tree/main/pipeline
+face_detection_model: "${root}/pipeline/face_detection_yunet_2023mar.onnx"
+imdb_reps: "${root}/yunet.ins.111224.txt"
+cast_dir: "${root}/txt_casts"
+name_file: "${root}/pipeline/name.basics.tsv"
+
+# TVQA data paths
+# TVQA: https://nlp.cs.unc.edu/data/jielei/tvqa/tvqa_public_html/index.html
+fps: 3
+audio_root: "${root}/tvqa_audio"
+subtitle_root: "${root}/tvqa_subtitles"
+frames_root: "${root}/tvqa_video_frames"
+
+# Indicate the shows you'd like to process
+# Same IDs as those from TVQA
+show_ids: ["met", "friends", "bbt", "house"]
+
+# Whisper for transcription
+whisper:
+  model_size: "large-v2"
+  batch_size: 512
+  compute_type: "float16"
+  device_index: 0 
+
+# Face detection
+yunet:
+  score_threshold: 0.6
+  nms_threshold: 0.3
+  top_k: 5000
+  input_size: [640, 640]
