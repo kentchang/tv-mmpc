@@ -78,7 +78,7 @@ Detected faces per frame with bounding boxes, keypoints, detection scores, and a
 Preprocessing pipeline for TVQA data:
 
 * `cfg.yaml`: YAML configuration file containing root paths, show list, API keys, etc.
-* `process.py`: Extracts frames, face embeddings, enhanced subtitles, and reconstructs annotated video clips.
+* `process.py`: Extracts frames, detectss faces, processes subtitles, and reconstructs annotated video clips.
  
 
 ### `inference/`
